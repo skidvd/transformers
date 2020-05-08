@@ -20,7 +20,7 @@ Transformer battles
 asynchronously and in parallel with each other.  Each individual battle's results are asynchronously updated and
 reflected on the SPA until all have completed, and the war's outcome and results are displayed.
 - After a war completes, for end-user efficiency, the SPA then presents the option to prepare for a 'Next War' that
-that is initiated with all the Transformer information as configured from the previous war but also allows additional
+is initiated with all the Transformer information as configured from the previous war but also allows additional
 additions, modifications and/or removals to that information as well.   
 
 ## Assumptions
@@ -32,7 +32,7 @@ I have made the following primary assumptions (some additional minor assumptions
 - For purposes of this exercise, the only browser that this was developed for and is supported on is Chrome; however, current and modern versions (as of this writing) may likely work - but they are not supported as they have not been tested/validated.
 - For purposes of this exercise running with the development version/build is sufficient
 - For purposes of this exercise, no security requirements are necessary: no SSL, authentication nor authorization are in place
-- In the interest or readability and maximizing information, and as there are inconsistencies between the two ares in the instructions regarding output; I have not strictly followed the requested output format (I am including all of the requested information plus a bit more in a slightly different format).  I am hopeful that this is both acceptable and beneficial to the end user experience.      
+- In the interest or readability and maximizing information, and as there are inconsistencies between the two areas in the instructions regarding output; I have not strictly followed the requested output format (I am including all of the requested information plus a bit more in a slightly different format).  I am hopeful that this is both acceptable and beneficial to the end user experience.      
 - My development and testing has been on a Unix box and this is therefore, all that is presently supported.  However, there are no known limitations that would preclude operation on a Windows platform - this is officially unsupported though.
 - While I typically do not like lingering console log stmts nor commented out src lines (that are not intentional comments) in committed code, I have left a few in this baseline that have been useful throughout development/debugging and/or that may be useful in the future (one such example is that the backend will log each non-special rule battles high-level result to the console as well as return it to the UI). 
 
