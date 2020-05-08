@@ -1,0 +1,18 @@
+
+.spaced {
+  margin-top: 15px;
+  margin-bottom: 15px
+}
+
+.results {
+  margin-top: 15px;
+}
+
+table {
+  width: 100%;
+  text-align: left;
+}
+
+li {
+  list-style: none;
+}
