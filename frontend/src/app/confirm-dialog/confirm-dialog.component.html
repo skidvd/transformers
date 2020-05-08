@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>
+  {{ title }}
+</h1>
+
+<div mat-dialog-content>
+  <p>{{ prompt }}</p>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="confirm(false)">No</button>
+  <button mat-raised-button color="warn" (click)="confirm(true)">Yes</button>
+</div>

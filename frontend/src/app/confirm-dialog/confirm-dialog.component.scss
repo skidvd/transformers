@@ -1,0 +1,10 @@
+::ng-deep {
+  .mat-dialog-container {
+    border-radius: 20px !important;
+  }
+
+  .cdk-overlay-dark-backdrop {
+    background-color: darkgray !important;
+    opacity: 0.65 !important;
+  }
+}
