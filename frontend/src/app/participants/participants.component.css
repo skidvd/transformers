@@ -1,0 +1,15 @@
+
+:host {
+  width: 90%;
+}
+
+.mat-expansion-panel-header-title {
+  font-weight: bold;
+}
+
+.war {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+

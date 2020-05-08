@@ -1,0 +1,40 @@
+<div>
+  <mat-accordion multi="true">
+    <mat-expansion-panel [expanded]="!currentWarState">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Autobots
+        </mat-panel-title>
+        <mat-panel-description>
+          Please specify the Autobots for the war here.
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <app-participant-band [transformers]="autobots$ | async" [band]="autobotsBand"></app-participant-band>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="!currentWarState">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Decepticons
+        </mat-panel-title>
+        <mat-panel-description>
+          Please specify the Decepticons for the war here
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <app-participant-band [transformers]="decepticons$ | async" [band]="decepticonsBand"></app-participant-band>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <div class="war">
+    <span matTooltip="You must have at least one Autobot and one Decepticon to go to war."
+          matTooltipPosition="above" [matTooltipDisabled]="autobots.length > 0 && decepticons.length > 0"
+          *ngIf="!currentWarState">
+      <button mat-raised-button color="primary" (click)="goToWar()"
+              [disabled]="!autobots.length || !decepticons.length">Go To War</button>
+    </span>
+
+    <app-war-state *ngIf="currentWarState"></app-war-state>
+  </div>
+</div>
