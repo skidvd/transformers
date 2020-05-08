@@ -10,7 +10,8 @@ I have made the following primary assumptions (some minor assumptions are only d
 - For purposes of this exercise running with the development version/build is sufficient
 - For purposes of this exercise, no security requirements are necessary: no SSL, authentication nor authorization are in place
 - In the interest or readability and maximizing information, and as there are inconsistencies between the two ares in the instructions regarding output; I have not strictly followed the requested output format (I am including all of the requested information plus a bit more in a slightly different format).  I am hopeful that this is both acceptable and beneficial to the end user experience.      
-- My development and testing has been on a Unix box and this is (therefore, this is all that is presently supported).  However, there are no know limitations that would preclude operation on Windows platforms - this is officially unsupported though. 
+- My development and testing has been on a Unix box and this is (therefore, this is all that is presently supported).  However, there are no know limitations that would preclude operation on Windows platforms - this is officially unsupported though.
+- While I typically do not like commented out src lines (that are not intentional comments) in committed code, I have left a few in this baseline that have been useful through development/debugging and/or that may be useful in the future. 
 
 ## How to install, build and run
 
