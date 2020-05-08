@@ -7,7 +7,43 @@ export interface ParticipantsState {
   decepticons: Transformer[];
 }
 
+/*
+const autobots = [];
+const decepticons = [];
+for (let i = 0; i < 100; i++) {
+  let id = uuid.v4();
+  autobots.push({
+    id,
+    name: id,
+    band: TransformerBand.A,
+    strength: Math.floor((Math.random() * 10) + 1),
+    intelligence: Math.floor((Math.random() * 10) + 1),
+    speed: Math.floor((Math.random() * 10) + 1),
+    endurance: Math.floor((Math.random() * 10) + 1),
+    rank: Math.floor((Math.random() * 10) + 1),
+    courage: Math.floor((Math.random() * 10) + 1),
+    firepower: Math.floor((Math.random() * 10) + 1),
+    skill: Math.floor((Math.random() * 10) + 1)
+  });
+  id = uuid.v4();
+  decepticons.push({
+    id,
+    name: id,
+    band: TransformerBand.D,
+    strength: Math.floor((Math.random() * 10) + 1),
+    intelligence: Math.floor((Math.random() * 10) + 1),
+    speed: Math.floor((Math.random() * 10) + 1),
+    endurance: Math.floor((Math.random() * 10) + 1),
+    rank: Math.floor((Math.random() * 10) + 1),
+    courage: Math.floor((Math.random() * 10) + 1),
+    firepower: Math.floor((Math.random() * 10) + 1),
+    skill: Math.floor((Math.random() * 10) + 1)
+  });
+}
+ */
 export const initialParticipantsState = {
+  // autobots,
+  // decepticons
   autobots: [],
   decepticons: []
   /*
