@@ -1,17 +1,40 @@
 # Transformers - The Transformation Company
 
+## Solution Abstract
+
+If you are not familiar with the assignment, you may wish to review it below [problem definition](https://github.com/skidvd/transformers#transformers-problem-definition).
+
+The assignment specifically requests that a *web application* be built to play the game.  The specifications, 
+rules and logic of the game play may easily be fulfilled within a Single Page Application (SPA) such is now and
+has been common practice.  Yet, modern *web applications* often entail much more than that and are complex 
+distributed systems relying on multiple platforms and often diverse technologies to collaborate as a cohesive unit
+to fulfill their intended purposes.  Therefore, in order to stay somewhat true to this larger/more complex view, my
+solution includes the following high-level architecture and components:
+
+- An Angular 9 SPA that collects the user's input for the Transformers, organizes and orchestrates overall game play
+- the Angular SPA uses NgRx to manage overall app and games state
+- a single endpoint REST API is used between the Angular app and the Node backed to evaluate the outcome of individual 
+Transformer battles
+- A Node and Express based backend server is used to accept and respond to the battle REST API
+- Once a war has been initiated, all battles are launched (based upon the order specified by the rules) and executed 
+asynchronously and in parallel with each other.  Each individual battle's results are asynchronously updated and
+reflected on the SPA until all have completed, and the war's outcome and results are displayed.
+- After a war completes, for end-user efficiency, the SPA then presents the option to prepare for a 'Next War' that
+that is initiated with all the Transformer information as configured from the previous war but also allows additional
+additions, modifications and/or removals to that information as well.   
+
 ## Assumptions
 
-I have made the following primary assumptions (some minor assumptions are only documented in the code):
+I have made the following primary assumptions (some additional minor assumptions are documented only in the code):
 
-- For better UX, any time that a Transformer name need to be compared, the comparison is performed in a case-insensitive manner
+- For better UX, any time that a Transformer **name** need to be compared, the comparison is performed in a case-insensitive manner
 - For purposes of this exercise, it is sufficient to run both the UI and backend processes on the local machine.  Furthermore, this is the only manner in which this can presently be expected to work well
-- For purposes of this exercise, the only browser that this was developed for and is supported is Chrome; however, current and modern versions (as of this writing) may likely work - but they are not supported as they have not been tested/validated.
+- For purposes of this exercise, the only browser that this was developed for and is supported on is Chrome; however, current and modern versions (as of this writing) may likely work - but they are not supported as they have not been tested/validated.
 - For purposes of this exercise running with the development version/build is sufficient
 - For purposes of this exercise, no security requirements are necessary: no SSL, authentication nor authorization are in place
 - In the interest or readability and maximizing information, and as there are inconsistencies between the two ares in the instructions regarding output; I have not strictly followed the requested output format (I am including all of the requested information plus a bit more in a slightly different format).  I am hopeful that this is both acceptable and beneficial to the end user experience.      
-- My development and testing has been on a Unix box and this is (therefore, this is all that is presently supported).  However, there are no know limitations that would preclude operation on Windows platforms - this is officially unsupported though.
-- While I typically do not like lingering console log stmts nor commented out src lines (that are not intentional comments) in committed code, I have left a few in this baseline that have been useful through development/debugging and/or that may be useful in the future (one such example is that the backend will log each battles high-level result to the console as well as return it to the UI). 
+- My development and testing has been on a Unix box and this is therefore, all that is presently supported.  However, there are no known limitations that would preclude operation on a Windows platform - this is officially unsupported though.
+- While I typically do not like lingering console log stmts nor commented out src lines (that are not intentional comments) in committed code, I have left a few in this baseline that have been useful throughout development/debugging and/or that may be useful in the future (one such example is that the backend will log each non-special rule battles high-level result to the console as well as return it to the UI). 
 
 ## How to install, build and run
 
