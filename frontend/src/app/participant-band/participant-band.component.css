@@ -1,0 +1,17 @@
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+}
+
+.actions button:not(:first-of-type) {
+  margin-left: 10px;
+}
+
+.add-transformer {
+  margin-left: 10px;
+}
