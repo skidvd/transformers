@@ -59,8 +59,8 @@
         <li>Eliminated Autobots: {{currentWarState.eliminatedAutobots}}</li>
         <li>Eliminated Decepticons: {{currentWarState.eliminatedDecepticons}}</li>
         <li>Winning team ({{warResults.winningTeam}})</li>
-        <li>Winning survivors ({{warResults.winningSurvivors}})</li>
-        <li>Losing survivors ({{warResults.loosingSurvivors}})</li>
+        <li>{{warResults.winningTeam.indexOf('Tie/Draw') < 0 ? 'Winning' : 'Autobot'}} survivors ({{warResults.winningSurvivors}})</li>
+        <li>{{warResults.winningTeam.indexOf('Tie/Draw') < 0 ? 'Losing' : 'Decepticon'}} survivors ({{warResults.loosingSurvivors}})</li>
       </ul>
     </div>
 
