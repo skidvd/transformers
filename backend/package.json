@@ -12,7 +12,7 @@
   "author": "Todd Gould",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.3"
+    "nodemon": "^2.0.20"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
